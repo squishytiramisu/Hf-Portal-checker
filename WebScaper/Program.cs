@@ -23,7 +23,9 @@ namespace WebShit
         public static string POINTS_IER = "https://hf.mit.bme.hu/hallgato/vimiac02";
 
         // Ide rakd be a 3. vizsga spanjét, kb igy kene kinezni csak nem ebben a sorban
-        public static string VIZSGA = "/html/body/div[4]/table/tbody/tr[21]/td[6]/span";
+        public static string VIZSGA1 = "/html/body/div[4]/table/tbody/tr[21]/td[6]/span";
+
+        public static string VIZSGA3 = "/html/body/div[4]/table/tbody/tr[25]/td[6]/span";
 
 
 
@@ -90,7 +92,7 @@ namespace WebShit
 
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(2000);
 
-                string ierPontok = driver.FindElement(By.XPath(VIZSGA)).Text;
+                string ierPontok = driver.FindElement(By.XPath(VIZSGA3)).Text;
 
                 Console.WriteLine(ierPontok);
                 Console.WriteLine("Ier Pontok megnezve");
