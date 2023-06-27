@@ -22,9 +22,10 @@ namespace WebShit
 
         public static string POINTS_IER = "https://hf.mit.bme.hu/hallgato/vimiac02";
 
-        // Ide rakd be a 3. vizsga spanjét, kb igy kene kinezni csak nem ebben a sorban
+       
         public static string VIZSGA1 = "/html/body/div[4]/table/tbody/tr[21]/td[6]/span";
 
+        //Sztem ez a 3. vizsga lol
         public static string VIZSGA3 = "/html/body/div[4]/table/tbody/tr[25]/td[6]/span";
 
 
@@ -61,7 +62,10 @@ namespace WebShit
 
 
             var chromeOptions = new ChromeOptions();
-           // chromeOptions.AddArguments("headless");
+           
+            
+            // TODO ajanlom hogy kapcsold be, de azert elsore nezd meg hogy bejelentkezett e
+            // chromeOptions.AddArguments("headless");
 
             Console.WriteLine("Starting a new check for IER eredmenyek at " + DateTime.Now.ToString("h:mm:ss tt"));
             var driver = new ChromeDriver(chromeOptions);
